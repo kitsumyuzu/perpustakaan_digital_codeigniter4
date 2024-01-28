@@ -1,0 +1,20 @@
+Perpustakaan Digital
+
+=> Admimistrator
+- Registrasi
+- Pendataan Barang
+- Peminjaman
+- Generate Laporan
+
+=> Petugas
+- Pendataan Barang
+- Generate Laporan
+
+
+=> Peminjam
+- Registrasi
+- Peminjaman
+
+
+* Setiap buku memiliki ulasan buku & kategori buku
+* Setiap peminjam memiliki koleksi buku pribadi

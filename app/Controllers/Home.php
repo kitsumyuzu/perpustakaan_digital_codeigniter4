@@ -40,11 +40,9 @@ class Home extends BaseController {
 
 					$setting['profile'] = $Schema -> getWhere('user', array('id_user' => session() -> get('id')));
 
-					$fetch['media'] = $Schema -> visual_table('media');
-
 				echo view('layout/_header');
 				echo view('layout/_menu', $setting);
-				echo view('pages/dashboard', $fetch);
+				echo view('dashboard');
 				echo view('layout/_footer');
 
 			}

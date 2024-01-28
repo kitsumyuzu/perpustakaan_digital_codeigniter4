@@ -28,6 +28,6 @@ class Level extends Migration
 
 	public function down()
 	{
-		$this -> forge -> dropTable('user');
+		$this -> forge -> dropTable('level');
 	}
 }
