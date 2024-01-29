@@ -1,8 +1,8 @@
         <div class="container-scroller">
             <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo mr-5" href="/Home/"><img src="<?= base_url('/assets/images/brand_logo') ?>/logo-brand-expand.png" class="mr-2" alt="logo"></a>
-                    <a class="navbar-brand brand-logo-mini" href="/Home/"><img src="<?= base_url('/assets/images/brand_logo') ?>/logo-brand-collapse.png" alt="logo"></a>
+                    <a class="navbar-brand brand-logo mr-5" href="/Home/"><img src="<?= base_url('/assets/brand_logo') ?>/expand-kitsu-library.png" class="mr-2" alt="logo"></a>
+                    <a class="navbar-brand brand-logo-mini" href="/Home/"><img src="<?= base_url('/assets/brand_logo') ?>/collapse-kitsu-library.png" alt="logo"></a>
                 </div>
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -34,7 +34,7 @@
                         <ul class="nav">
 
                             <li class="nav-item active">
-                                <a class="nav-link" href="/home/dashboard/?">
+                                <a class="nav-link" href="/Home/dashboard/?">
                                     <i class="fas fa-house-chimney menu-icon"></i>
                                     <span class="menu-title">Dashboard</span>
                                 </a>
@@ -43,14 +43,14 @@
                             <hr>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/kategori_buku/?">
+                                <a class="nav-link" href="/Buku/kategori_buku/?">
                                     <i class="fas fa-book-bookmark menu-icon"></i>
                                     <span class="menu-title">Kategori Buku</span>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/kategori_buku/?">
+                                <a class="nav-link" href="/Buku/?">
                                     <i class="fas fa-book menu-icon"></i>
                                     <span class="menu-title">Buku</span>
                                 </a>
@@ -79,10 +79,17 @@
                         <ul class="nav">
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/kategori_buku/?">
+                                <a class="nav-link" data-toggle="collapse" href="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fas fa-user-gear menu-icon"></i>
                                     <span class="menu-title">User</span>
+                                    <i class="menu-arrow"></i>
                                 </a>
+                                <div class="collapse" id="user">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"> <a href="/Home/user_petugas/" class="nav-link">Petugas </a></li>
+                                        <li class="nav-item"> <a href="/Home/user_peminjam/" class="nav-link">Member </a></li>
+                                    </ul>
+                                </div>
                             </li>
 
                             <li class="nav-item">

@@ -28,22 +28,28 @@ class User extends Migration
                 'constraint' => 100,
                 'null'       => true,
             ],
-            'level' => [
+            '_level' => [
                 'type'       => 'INT',
                 'constraint' => 10,
                 'null'       => true,
+            ],
+            '_profile' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 225,
+                'null'       => false,
+                'default'    => 'default-profile.png'
             ],
 			'_createdAt DATETIME DEFAULT current_timestamp',
-            '_createdBy' => [
+            'USR_createdBy' => [
                 'type'       => 'INT',
                 'constraint' => 10,
                 'null'       => true,
             ],
-			'_updatedAt' => [
+			'USR_updatedAt' => [
                 'type'       => 'DATETIME',
                 'null'       => true,
             ],
-            '_updatedBy' => [
+            'USR_updatedBy' => [
                 'type'       => 'INT',
                 'constraint' => 10,
                 'null'       => true,

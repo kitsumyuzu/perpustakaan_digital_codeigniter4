@@ -47,4 +47,10 @@
         }
     </style>
 
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
 </html>

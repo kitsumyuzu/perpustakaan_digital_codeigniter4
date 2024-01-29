@@ -14,7 +14,7 @@
         <!-- inject:css -->
             <link rel="stylesheet" href="<?= base_url('template') ?>/css/vertical-layout-light/style.css">
         <!-- endinject -->
-            <link rel="shortcut icon" href="images/favicon.png">
+            <link rel="shortcut icon" href="<?= base_url('assets/brand_logo') ?>/collapse-kitsu-library.png">
             <link rel="stylesheet" href="<?= base_url('template') ?>/vendors/fontawesome-icon/fontawesome.min.css">
     </head>
 

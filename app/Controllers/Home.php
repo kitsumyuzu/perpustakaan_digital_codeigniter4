@@ -21,7 +21,7 @@ class Home extends BaseController {
 
 				echo view('layout/_header');
 				echo view('layout/_menu', $setting);
-				echo view('pages/dashboard');
+				echo view('dashboard');
 				echo view('layout/_footer');
 
 			}
@@ -103,6 +103,43 @@ class Home extends BaseController {
 			session() -> destroy();
 
 			return redirect() -> to('/Home/');
+
+		}
+
+	// [ Register Function ] ==================================================================================================== //
+	
+		public function register() {
+
+			if (session() -> get('id') == NULL || session() -> get('id') < 0) {
+
+				return view('register');
+
+			} else if (session() -> get('id') > 0) {
+
+				return redirect() -> to('/Home/');
+
+			}
+
+		}
+
+		public function signup() {
+
+			$Schema = new Schema();
+
+				$username = $this -> request -> getPost('username');
+				$email = $this -> request -> getPost('email');
+				$password = $this -> request -> getPost('password');
+
+
+			$data = $Schema -> create_data('user', array('username' => $username, 'email' => $email, 'password' => md5($password), '_level' => '3', 'USR_createdBy' => '0'));
+
+				if ($data)
+				{
+					session() -> setFlashdata('message', 'berhasil di buat.');
+
+					return redirect() -> to('/Home/');
+				}
+
 
 		}
 
